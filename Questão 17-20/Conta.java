@@ -17,6 +17,10 @@ public class Conta {
         return saldo;
     }
 
+    public double calcularSaldoEspecial() {
+        return saldo + especial;
+    }
+
     // Getters e setters para Nome e Especial
     public String getNome() {
         return nome;

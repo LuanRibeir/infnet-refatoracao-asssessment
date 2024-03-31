@@ -16,4 +16,13 @@ public class ContaTest {
 
         assertEquals(saldoEsperado, conta.consultarSaldo(), 0.0);
     }
+
+    @Test
+    public void testCalcularSaldoEspecial() {
+        Conta conta = new Conta("Teste", 1000.00, 2.0);
+
+        double saldoEspecialEsperado = conta.consultarSaldo() + conta.getEspecial();
+
+        assertEquals(saldoEspecialEsperado, conta.calcularSaldoEspecial(), 0.0);
+    }
 }
