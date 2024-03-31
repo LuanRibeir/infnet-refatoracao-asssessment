@@ -21,6 +21,14 @@ public class Conta {
         return saldo + especial;
     }
 
+    public void debitar(double valor) {
+        double saldoTotal = saldo + especial;
+        if (valor > saldoTotal) {
+            throw new IllegalArgumentException("ERRO: Saldo insuficiente");
+        }
+        saldo -= valor;
+    }
+
     // Getters e setters para Nome e Especial
     public String getNome() {
         return nome;
